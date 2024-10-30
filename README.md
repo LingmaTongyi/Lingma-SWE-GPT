@@ -70,8 +70,8 @@ Refer to the [SWE-bench](https://github.com/princeton-nlp/SWE-bench) repository 
 
 ## TODO
 - [x] upload 72B model
-- [] upload 7B model
-- [] upload technical report 
+- [ ] upload 7B model
+- [ ] upload technical report 
 
 ## Citation
 
