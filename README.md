@@ -26,6 +26,10 @@ Lingma SWE-GPT has demonstrated impressive performance in software engineering t
 - 👑 Outperforms other open-source models of similar scale in software engineering-specific tasks (a
 22.76% increase compared to Llama 3.1 405B).
 
+![image](https://github.com/user-attachments/assets/e250d89d-8962-4f5b-9cef-00dd34d99532)
+
+
+
 ## Quick Start
 ### Setup
 First, create a virtual environment and install the required dependencies.
@@ -65,6 +69,12 @@ We recommend using SWE-bench docker directly for evaluation.
 Refer to the [SWE-bench](https://github.com/princeton-nlp/SWE-bench) repository for more details.
 
 #### Note: we have built-in testbed examples. If you want to download the complete testbed, please download it from [here](https://modelscope.cn/datasets/Lingma/testbed/summary) and replace the testbed folder.
+
+## Other Results
+
+![image](https://github.com/user-attachments/assets/994b7de4-3dc7-4136-a81c-1315651ad646)
+
+![image](https://github.com/user-attachments/assets/40bc0846-2e59-4a64-ae7d-f6eda20db69b)
 
 
 
