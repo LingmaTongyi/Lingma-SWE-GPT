@@ -14,6 +14,8 @@
 
 Lingma SWE-GPT is a specialized model that focuses on addressing the unique challenges faced in software engineering. By leveraging the robust capabilities of the Qwen base models and incorporating domain-specific knowledge, this model aims to provide intelligent assistance across various aspects of software development.
 
+![image](https://github.com/user-attachments/assets/c2b0b1d6-0cc9-42f1-abc3-ed51e52b457c)
+
 
 ## Model Performance
 
@@ -64,8 +66,14 @@ Refer to the [SWE-bench](https://github.com/princeton-nlp/SWE-bench) repository 
 
 #### Note: we have built-in testbed examples. If you want to download the complete testbed, please download it from [here](https://modelscope.cn/datasets/Lingma/testbed/summary) and replace the testbed folder.
 
-## Citation
 
+
+## TODO
+- [x] upload 72B model
+- [] upload 7B model
+- [] upload technical report 
+
+## Citation
 
 ## Acknowledgments
 
