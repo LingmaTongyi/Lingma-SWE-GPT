@@ -1,0 +1,12 @@
+[
+    {
+        "file_name": "django/forms/models.py",
+        "abs_file_path": "/mnt/workspace/mingwei/opensource/SWESynInfer/SWE-bench/repos/testbed_temp_3/django__django-11163/django/forms/models.py",
+        "bug_locations": [
+            "<function>model_to_dict</function>"
+        ],
+        "bug_locations_edit_lineno": [
+            86
+        ]
+    }
+]

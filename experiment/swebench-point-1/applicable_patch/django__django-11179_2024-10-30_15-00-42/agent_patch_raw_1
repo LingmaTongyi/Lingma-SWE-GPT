@@ -1,0 +1,37 @@
+# Modification 1
+
+```python
+<file>django/db/models/base.py</file>
+<original>    def delete(self, using=None, keep_parents=False):
+        using = using or router.db_for_write(self.__class__, instance=self)
+        assert self.pk is not None, (
+            "%s object can't be deleted because its %s attribute is set to None." %
+            (self._meta.object_name, self._meta.pk.attname)
+        )
+
+        collector = Collector(using=using)
+        collector.collect([self], keep_parents=keep_parents)
+        return collector.delete()
+</original>
+<patched>    def delete(self, using=None, keep_parents=False):
+        using = using or router.db_for_write(self.__class__, instance=self)
+        assert self.pk is not None, (
+            "%s object can't be deleted because its %s attribute is set to None." %
+            (self._meta.object_name, self._meta.pk.attname)
+        )
+
+        collector = Collector(using=using)
+        collector.collect([self], keep_parents=keep_parents)
+        collector.delete()
+
+        # Set the PK to None after deletion
+        self._set_pk_val(None)
+</patched>
+```
+
+### Explanation
+
+- **Original Code:** The `delete` method in the `Model` class calls `collector.delete()` to handle the deletion process but does not update the PK of the instance after deletion.
+- **Patched Code:** The patched version sets the PK to `None` after the `collector.delete()` call, ensuring that the PK is cleared after deletion.
+
+This patch addresses the issue by ensuring that the PK is set to `None` after the `delete()` call, as required.

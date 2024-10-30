@@ -1,0 +1,32 @@
+[
+    {
+        "file_name": "django/db/models/utils.py",
+        "bug_locations": [
+            "<function>make_model_tuple</function>"
+        ]
+    },
+    {
+        "file_name": "django/db/models/base.py",
+        "bug_locations": [
+            "<class>Model</class>"
+        ]
+    },
+    {
+        "file_name": "django/db/models/options.py",
+        "bug_locations": [
+            "<class>Options</class>"
+        ]
+    },
+    {
+        "file_name": "django/db/models/query.py",
+        "bug_locations": [
+            "<class>QuerySet</class>"
+        ]
+    },
+    {
+        "file_name": "django/db/models/fields/__init__.py",
+        "bug_locations": [
+            "<class>Field</class>"
+        ]
+    }
+]

@@ -1,0 +1,143 @@
+[
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "delete",
+            "class_name": "Model"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "delete",
+            "class_name": "Collector"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "_set_pk_val",
+            "class_name": "Model"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "_get_pk_val",
+            "class_name": "Model"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "save",
+            "class_name": "Model"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "save_base",
+            "class_name": "Model"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "refresh_from_db",
+            "class_name": "Model"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "get_prep_value",
+            "class_name": "Field"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "to_python",
+            "class_name": "Field"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "contribute_to_class",
+            "class_name": "Field"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_class_in_file",
+        "arguments": {
+            "class_name": "Model",
+            "file_name": "django/db/models/base.py"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "delete",
+            "class_name": "Model"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_class_in_file",
+        "arguments": {
+            "class_name": "Collector",
+            "file_name": "django/db/models/deletion.py"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "delete",
+            "class_name": "Collector"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "_set_pk_val",
+            "class_name": "Model"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "_get_pk_val",
+            "class_name": "Model"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "search_method_in_class",
+        "arguments": {
+            "method_name": "delete",
+            "class_name": "Model"
+        },
+        "call_ok": true
+    },
+    {
+        "func_name": "write_patch",
+        "arguments": {},
+        "call_ok": true
+    }
+]

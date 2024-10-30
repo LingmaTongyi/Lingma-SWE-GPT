@@ -1,0 +1,8 @@
+[
+    {
+        "file_name": "django/forms/models.py",
+        "bug_locations": [
+            "<function>model_to_dict</function>"
+        ]
+    }
+]

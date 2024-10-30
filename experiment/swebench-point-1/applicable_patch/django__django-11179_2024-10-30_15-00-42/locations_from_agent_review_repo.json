@@ -1,0 +1,27 @@
+[
+    {
+        "file_name": "django/db/models/base.py",
+        "bug_locations": [
+            "<function>delete</function>",
+            "<function>_set_pk_val</function>",
+            "<function>_get_pk_val</function>",
+            "<function>save</function>",
+            "<function>save_base</function>",
+            "<function>refresh_from_db</function>"
+        ]
+    },
+    {
+        "file_name": "django/db/models/deletion.py",
+        "bug_locations": [
+            "<function>delete</function>"
+        ]
+    },
+    {
+        "file_name": "django/db/models/fields/__init__.py",
+        "bug_locations": [
+            "<function>get_prep_value</function>",
+            "<function>to_python</function>",
+            "<function>contribute_to_class</function>"
+        ]
+    }
+]

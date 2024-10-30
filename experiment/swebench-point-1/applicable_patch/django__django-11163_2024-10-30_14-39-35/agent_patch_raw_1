@@ -1,0 +1,67 @@
+Based on the retrieved context and the issue description, here's the patch to fix the problem:
+
+# modification 1
+```python
+<file>django/forms/models.py</file>
+<original>def model_to_dict(instance, fields=None, exclude=None):
+    """
+    Return a dict containing the data in ``instance`` suitable for passing as
+    a Form's ``initial`` keyword argument.
+
+    ``fields`` is an optional list of field names. If provided, return only the
+    named.
+
+    ``exclude`` is an optional list of field names. If provided, exclude the
+    named from the returned dict, even if they are listed in the ``fields``
+    argument.
+    """
+    opts = instance._meta
+    data = {}
+    for f in chain(opts.concrete_fields, opts.private_fields, opts.many_to_many):
+        if not getattr(f, 'editable', False):
+            continue
+        if fields and f.name not in fields:
+            continue
+        if exclude and f.name in exclude:
+            continue
+        data[f.name] = f.value_from_object(instance)
+    return data</original>
+<patched>def model_to_dict(instance, fields=None, exclude=None):
+    """
+    Return a dict containing the data in ``instance`` suitable for passing as
+    a Form's ``initial`` keyword argument.
+
+    ``fields`` is an optional list of field names. If provided, return only the
+    named.
+
+    ``exclude`` is an optional list of field names. If provided, exclude the
+    named from the returned dict, even if they are listed in the ``fields``
+    argument.
+    """
+    opts = instance._meta
+    data = {}
+    for f in chain(opts.concrete_fields, opts.private_fields, opts.many_to_many):
+        if not getattr(f, 'editable', False):
+            continue
+        if fields is not None and f.name not in fields:
+            continue
+        if exclude and f.name in exclude:
+            continue
+        data[f.name] = f.value_from_object(instance)
+    return data</patched>
+```
+
+This patch modifies the `model_to_dict()` function in the `django/forms/models.py` file. The change is made to the condition that filters fields based on the `fields` parameter.
+
+The original line:
+```python
+if fields and f.name not in fields:
+```
+is replaced with:
+```python
+if fields is not None and f.name not in fields:
+```
+
+This change ensures that when `fields` is an empty list, the function will still attempt to filter the fields, resulting in an empty dictionary being returned. The modification maintains the existing behavior for `None` and non-empty list values of `fields`, while fixing the issue for empty lists.
+
+The patch addresses the problem described in the issue, making the function consistent with the expected behavior of returning an empty dictionary when an empty list of fields is provided. This change is minimal and focused, reducing the risk of introducing new bugs while solving the reported issue.
