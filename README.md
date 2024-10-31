@@ -21,7 +21,7 @@ Lingma SWE-GPT is a specialized model that focuses on addressing the unique chal
 
 Lingma SWE-GPT has demonstrated impressive performance in software engineering tasks:
 
-- 🌟 Achieved a **30.2% solution rate on the authoritative SWE-bench Verified** leaderboard for software engineering intelligent agents.
+- 🌟 Achieved a **30.20% (72B) and 18.20% (7B) solution rate on the authoritative SWE-bench Verified** leaderboard for software engineering intelligent agents.
 - 🌟 Achieved a **51.16%** fault location success rate on SWE-bench Verified.
 - 👑 Outperforms other open-source models of similar scale in software engineering-specific tasks (a
 22.76% increase compared to Llama 3.1 405B).
@@ -47,14 +47,29 @@ python scripts/1_change_testbed_path.py YOUR_ABSOLUTE_PATH/SWESynInfer/SWE-bench
 export VLLM_USE_MODELSCOPE=True
 export CUDA_VISIBLE_DEVICES=0,1,2,3
 
+# 7B
 python -m vllm.entrypoints.openai.api_server \
     --gpu-memory-utilization 0.95 \
     --served-model-name Lingma-SWE-GPT \
-    --model yingwei/Lingma-SWE-GPT-v20240925\
+    --model Lingma/Lingma-SWE-GPT-7B\
     --tensor-parallel-size 4 \
     --max-model-len 131072 \
     --trust-remote-code \
     --rope-scaling '{"type": "yarn", "factor": 4.0, "original_max_position_embeddings": 32768}'
+
+
+
+# 72B (Minimum 4 cards required)
+"""
+python -m vllm.entrypoints.openai.api_server \
+    --gpu-memory-utilization 0.95 \
+    --served-model-name Lingma-SWE-GPT \
+    --model Lingma/Lingma-SWE-GPT-72B\
+    --tensor-parallel-size 4 \
+    --max-model-len 131072 \
+    --trust-remote-code \
+    --rope-scaling '{"type": "yarn", "factor": 4.0, "original_max_position_embeddings": 32768}'
+"""
 
 # test for deployment success
 conda activate swesyninfer
@@ -80,7 +95,7 @@ Refer to the [SWE-bench](https://github.com/princeton-nlp/SWE-bench) repository 
 
 ## TODO
 - [x] upload 72B model
-- [ ] upload 7B model
+- [x] upload 7B model
 - [ ] upload technical report 
 
 ## Citation
