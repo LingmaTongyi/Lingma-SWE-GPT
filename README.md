@@ -75,6 +75,12 @@ python -m vllm.entrypoints.openai.api_server \
 conda activate swesyninfer
 python scripts/2_call_vllm.py
 ```
+You can also download the model checkpoint from:
+```
+https://www.modelscope.cn/models/Lingma/Lingma-SWE-GPT-7B/summary
+https://www.modelscope.cn/models/Lingma/Lingma-SWE-GPT-72B/summary
+```
+
 ### Now You can run SWE-GPT on SWE-bench
 ```
 python scripts/run.py conf/vanilla-lite-swebench.conf -f
