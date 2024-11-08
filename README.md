@@ -102,9 +102,17 @@ Refer to the [SWE-bench](https://github.com/princeton-nlp/SWE-bench) repository 
 ## TODO
 - [x] upload 72B model
 - [x] upload 7B model
-- [ ] upload technical report 
+- [x] upload technical report 
 
 ## Citation
+```
+@article{ma2024lingma,
+  title={Lingma SWE-GPT: An Open Development-Process-Centric Language Model for Automated Software Improvement},
+  author={Ma, Yingwei and Cao, Rongyu and Cao, Yongchang and Zhang, Yue and Chen, Jue and Liu, Yibo and Liu, Yuchen and Li, Binhua and Huang, Fei and Li, Yongbin},
+  journal={arXiv preprint arXiv:2411.00622},
+  year={2024}
+}
+```
 
 ## Acknowledgments
 
