@@ -34,8 +34,8 @@ Lingma SWE-GPT has demonstrated impressive performance in software engineering t
 ### Setup
 First, create a virtual environment and install the required dependencies.
 ```
-git clone https://github.com/LingmaTongyi/SWESynInfer.git
-cd SWESynInfer
+git clone https://github.com/LingmaTongyi/Lingma-SWE-GPT.git
+cd Lingma-SWE-GPT
 conda env create -f environment.yml
 conda activate swesyninfer
 
