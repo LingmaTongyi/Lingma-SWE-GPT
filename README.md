@@ -102,7 +102,8 @@ Refer to the [SWE-bench](https://github.com/princeton-nlp/SWE-bench) repository 
 ## TODO
 - [x] upload 72B model
 - [x] upload 7B model
-- [x] upload technical report 
+- [x] upload technical report
+- [ ] add multilingual support (Java/Js/Ts/Rust...)
 
 ## Citation
 ```
