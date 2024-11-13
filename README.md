@@ -36,7 +36,18 @@ First, create a virtual environment and install the required dependencies.
 ```
 git clone https://github.com/LingmaTongyi/Lingma-SWE-GPT.git
 cd Lingma-SWE-GPT
+
+(1) conda
 conda env create -f environment.yml
+
+(2) Mamba
+# Download and install Mamba (a faster version of conda)
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
+source ~/.bashrc
+mamba env create -f environment.yml
+
+
 conda activate swesyninfer
 
 # Set repo_path in setup_map.json (SWESynInfer/SWE-bench/setup_result/setup_map.json) to the local path
