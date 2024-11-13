@@ -40,13 +40,12 @@ cd Lingma-SWE-GPT
 (1) conda
 conda env create -f environment.yml
 
-(2) Mamba
+(2) Mamba (Optional)
 # Download and install Mamba (a faster version of conda)
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 source ~/.bashrc
 mamba env create -f environment.yml
-
 
 conda activate swesyninfer
 
