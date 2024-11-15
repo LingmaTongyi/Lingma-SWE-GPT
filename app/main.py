@@ -119,9 +119,9 @@ def run_one_task(task: Task, loop_times=1) -> bool:
             else:
                 temp_repo_path = repo_path.replace('SWE-bench/repos/testbed', 'SWE-bench/repos/testbed_temp_3')
 
+            remove_directory_if_exists(temp_repo_path)
             temp_repo_path = os.path.dirname(temp_repo_path)
             # if temp_path exists, delete
-            remove_directory_if_exists(temp_repo_path)
             apputils.create_dir_if_not_exists(temp_repo_path)
             copy_cmd = ["cp", "-R", repo_path, temp_repo_path]
             print('temp_repo_path', temp_repo_path)
