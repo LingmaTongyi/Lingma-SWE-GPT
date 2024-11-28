@@ -51,6 +51,12 @@ conda activate swesyninfer
 
 # Set repo_path in setup_map.json (SWESynInfer/SWE-bench/setup_result/setup_map.json) to the local path
 python scripts/1_change_testbed_path.py YOUR_ABSOLUTE_PATH/Lingma-SWE-GPT/SWE-bench/repos/testbed
+
+(3) Git-related configuration
+
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
 ```
 ### Model download and deployment
 ```
