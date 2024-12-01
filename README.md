@@ -53,7 +53,6 @@ conda activate swesyninfer
 python scripts/1_change_testbed_path.py YOUR_ABSOLUTE_PATH/Lingma-SWE-GPT/SWE-bench/repos/testbed
 
 (3) Git-related configuration
-
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 
